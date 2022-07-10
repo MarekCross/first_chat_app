@@ -7,103 +7,133 @@ body {
   width: 100vw;
   background-image: linear-gradient(to bottom right, #34b3f1, #22bb8b);
   font-family: 'Roboto', sans-serif;
-}
-header {
-  width: 100%;
-  height: auto;
-  h1 {
-    font-family: 'Bebas Neue', cursive;
-    color: white;
-    text-align: center;
-  }
-}
-main {
-  margin: auto;
-  width: 400px;
-  height: 700px;
-  border-radius: 30px;
-  overflow: hidden;
-  .user_id {
+
+  header {
     width: 100%;
-    height: 10%;
-    background-color: #0b263395;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    .chat_icon {
-      height: 70%;
-      border: 3px rgba(255, 255, 255, 0.769) solid;
-      border-radius: 50%;
-      margin: 15px;
-    }
-    .user_name {
+    height: auto;
+    h1 {
+      font-family: 'Bebas Neue', cursive;
       color: white;
-      font-size: 30px;
-      font-family: 'Roboto', sans-serif;
+      text-align: center;
     }
   }
-  .chat {
-    height: 80%;
-    background-color: #0b26335b;
+  main {
+    margin: auto;
+    width: 400px;
+    height: 700px;
+    border-radius: 30px;
+    //overflow: hidden;
+    .user_id {
+      width: 100%;
+      height: 10%;
+      background-color: #0b263395;
 
-    display: flex;
-    flex-direction: column;
-    .message_get {
-      min-height: 25px;
-      margin: 10px;
-      font-size: 20px;
-      width: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .chat_icon {
+        height: 70%;
+        border: 3px rgba(255, 255, 255, 0.769) solid;
+        border-radius: 50%;
+        margin: 15px;
+      }
+      .user_name {
+        color: white;
+        font-size: 30px;
+        font-family: 'Roboto', sans-serif;
+      }
+    }
+    .chat {
+      overflow: scroll;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      height: 80%;
+      background-color: #0b26335b;
 
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: left;
-      .message_get_p {
-        margin: 5px;
-        //display: inline-block;
-        //color: white;
-        background-color: rgba(202, 218, 242, 0.428);
+      display: flex;
+      flex-direction: column;
+      .message_get {
+        min-height: 25px;
+        margin: 10px;
+        font-size: 20px;
+        width: 88%;
+
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: left;
+
+        .message_get_p {
+          width: 100%;
+          margin: 5px;
+          text-align: right;
+          display: inline-block;
+          color: white;
+          background-color: rgba(202, 218, 242, 0.428);
+          border-radius: 25px;
+          padding: 10px;
+          text-align: right;
+        }
+      }
+    }
+    .send_message_section {
+      background-color: #0b26337b;
+      height: 10%;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .message_text {
+        background-color: transparent;
+        width: 70%;
+        height: 50%;
         border-radius: 25px;
-        padding: 10px;
-        text-align: right;
+        font-size: 20px;
+        border: white 2px solid;
+        color: #0b2633bc;
+        padding-left: 8px;
       }
-      .user1 {
-        text-align: right;
-        color: red;
+      .btn_send {
+        width: 20%;
+        height: 50%;
+        background-color: rgb(54, 190, 54);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
       }
-      .user2 {
-        text-align: right;
-        color: blue;
+    }
+    .log_out_section {
+      display: block;
+      width: 100%;
+      height: 40px;
+      background-color: #0b26337b;
+
+      display: flex;
+      justify-content: center;
+      .log_out {
+        width: 40%;
+        height: 100%;
+        background-color: #0b26337b;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        border-radius: 25px;
+        border: none;
+        cursor: pointer;
+      }
+      .log_out:hover {
+        background-color: royalblue;
+        transition: 0.5s ease;
       }
     }
   }
-  .send_message_section {
-    background-color: #0b26337b;
-    height: 10%;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .message_text {
-      background-color: transparent;
-      width: 70%;
-      height: 50%;
-      border-radius: 25px;
-      font-size: 20px;
-      border: white 2px solid;
-      color: #0b2633bc;
-      padding-left: 8px;
-    }
-    .btn_send {
-      width: 20%;
-      height: 50%;
-      background-color: rgb(54, 190, 54);
-      color: white;
-      font-family: 'Roboto', sans-serif;
-      font-size: 20px;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-    }
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: white;
   }
 }

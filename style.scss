@@ -55,35 +55,25 @@ main {
       font-size: 20px;
       width: auto;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: left;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: left;
       .message_get_p {
         margin: 5px;
-        display: inline-block;
-        color: white;
+        //display: inline-block;
+        //color: white;
         background-color: rgba(202, 218, 242, 0.428);
         border-radius: 25px;
         padding: 10px;
-      }
-    }
-    .message_send {
-      min-height: 25px;
-      margin: 10px;
-      font-size: 20px;
-      width: auto;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: right;
-      .message_send_p {
-        margin: 5px;
-        display: inline-block;
-        color: white;
-        background-image: linear-gradient(to bottom right, #15a5ed, #4baa8c);
-        border-radius: 25px;
-        padding: 10px;
         text-align: right;
+      }
+      .user1 {
+        text-align: right;
+        color: red;
+      }
+      .user2 {
+        text-align: right;
+        color: blue;
       }
     }
   }
@@ -100,7 +90,7 @@ main {
       height: 50%;
       border-radius: 25px;
       font-size: 20px;
-      border: none;
+      border: white 2px solid;
       color: #0b2633bc;
       padding-left: 8px;
     }

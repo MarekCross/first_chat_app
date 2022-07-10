@@ -1,0 +1,119 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to bottom right, #34b3f1, #22bb8b);
+  font-family: 'Roboto', sans-serif;
+}
+header {
+  width: 100%;
+  height: auto;
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    text-align: center;
+  }
+}
+main {
+  margin: auto;
+  width: 400px;
+  height: 700px;
+  border-radius: 30px;
+  overflow: hidden;
+  .user_id {
+    width: 100%;
+    height: 10%;
+    background-color: #0b263395;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .chat_icon {
+      height: 70%;
+      border: 3px rgba(255, 255, 255, 0.769) solid;
+      border-radius: 50%;
+      margin: 15px;
+    }
+    .user_name {
+      color: white;
+      font-size: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+  .chat {
+    height: 80%;
+    background-color: #0b26335b;
+
+    display: flex;
+    flex-direction: column;
+    .message_get {
+      min-height: 25px;
+      margin: 10px;
+      font-size: 20px;
+      width: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      .message_get_p {
+        margin: 5px;
+        display: inline-block;
+        color: white;
+        background-color: rgba(202, 218, 242, 0.428);
+        border-radius: 25px;
+        padding: 10px;
+      }
+    }
+    .message_send {
+      min-height: 25px;
+      margin: 10px;
+      font-size: 20px;
+      width: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      .message_send_p {
+        margin: 5px;
+        display: inline-block;
+        color: white;
+        background-image: linear-gradient(to bottom right, #15a5ed, #4baa8c);
+        border-radius: 25px;
+        padding: 10px;
+        text-align: right;
+      }
+    }
+  }
+  .send_message_section {
+    background-color: #0b26337b;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .message_text {
+      background-color: transparent;
+      width: 70%;
+      height: 50%;
+      border-radius: 25px;
+      font-size: 20px;
+      border: none;
+      color: #0b2633bc;
+      padding-left: 8px;
+    }
+    .btn_send {
+      width: 20%;
+      height: 50%;
+      background-color: rgb(54, 190, 54);
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

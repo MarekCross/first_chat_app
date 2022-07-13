@@ -13,14 +13,14 @@ let currentUser = '';
 //set active user by click a button
 user1Button.addEventListener('click', function () {
   currentUser = 'user1';
-  userName.innerText = 'You chat with Marcin';
+  userName.innerText = 'Oliwia';
   user1Button.style.backgroundColor = 'royalblue';
   user2Button.style.backgroundColor = 'white';
   chooseUser.classList.add('display-none');
 });
 user2Button.addEventListener('click', function () {
   currentUser = 'user2';
-  userName.innerText = 'You chat with Oliwia';
+  userName.innerText = 'Marcin';
   user2Button.style.backgroundColor = 'royalblue';
   user1Button.style.backgroundColor = 'white';
   chooseUser.classList.add('display-none');
@@ -35,6 +35,17 @@ sendButton.addEventListener('click', function () {
     ` <p class="${currentUser} message_get_p " style="text-align: right;">${inputField.value}</p>`
   );
   inputField.value = '';
+});
+sendButton.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    if (currentUser === '') return;
+    messageGet.insertAdjacentHTML(
+      'beforeend',
+
+      ` <p class="${currentUser} message_get_p " style="text-align: right;">${inputField.value}</p>`
+    );
+    inputField.value = '';
+  }
 });
 
 const user1 = document.getElementsByClassName('user1');

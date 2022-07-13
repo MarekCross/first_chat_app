@@ -6,6 +6,8 @@
 body {
   height: 100vh;
   width: 100vw;
+  min-width: 500px;
+  min-height: 900px;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#34b3f1), to(#22bb8b));
   background-image: linear-gradient(to bottom right, #34b3f1, #22bb8b);
   font-family: 'Roboto', sans-serif;
@@ -37,25 +39,11 @@ body main .choose-user {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#22bb8b), to(#34b3f1));
   background-image: linear-gradient(to bottom right, #22bb8b, #34b3f1);
+  overflow: hidden;
 }
 
 body main .choose-user .h1-choose-user {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 60px;
-  color: white;
-}
-
-body main .choose-user .user-buttons {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin-top: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,6 +51,27 @@ body main .choose-user .user-buttons {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+
+body main .choose-user .user-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 body main .choose-user .button_style_choose_user {
@@ -76,6 +85,12 @@ body main .choose-user .button_style_choose_user {
   border: none;
   cursor: pointer;
   margin: 20px;
+}
+
+body main .choose-user .button_style_choose_user:hover {
+  background-color: royalblue;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 body main .user_id {
@@ -111,6 +126,7 @@ body main .chat {
   overflow: scroll;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  overflow-y: auto;
   height: 80%;
   background-color: #0b26335b;
   display: -webkit-box;
@@ -127,6 +143,16 @@ body main .chat .message_get {
   margin: 10px;
   font-size: 20px;
   width: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 body main .chat .message_get .message_get_p {
@@ -210,7 +236,7 @@ body main .log_out_section .log_out:hover {
 
 body footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   text-align: center;
   color: white;
@@ -218,5 +244,7 @@ body footer {
 
 .display-none {
   display: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 /*# sourceMappingURL=style.css.map */
